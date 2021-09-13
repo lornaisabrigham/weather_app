@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styling.css" />
+  </head>
+  <body>
+    <div class="webpage">
+      <div class="container">
+        <form id="searchBar">
+          <input
+            type="text"
+            placeholder="e.g. London                🔎"
+            autocomplete="off"
+            autofous="on"
+            id="searchCity"
+          />
+          <input type="submit" value="search" />
+          </form>
+        </div>
+        <div class="temperature">
+          <button class="celcius"
+          id="celciusButton">°C</button>
+          <button class="farenheit"
+          id="farenheitButton">°F</button>
+        </div>
+      
+        <h1>Welcome to</h1>
+        <h2 class="border p-2 mt-2 mb-4 rounded"></h2>
+        <div class="row">
+          <div class="col-6">
+            <h3>Today</h3>
+            <div class="row">
+              <div class="col-6">
+                <span class="icon">⛈</span>
+              </div>
+              <div class="col">
+                <ul>
+                  <li id="dayZeroTemp"></li>
+                  <li id="dayZeroWind"></li>
+                  <li id="dayZeroHum"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <h3>Friday</h3>
+            <p><span id="dayTwoTemp">10°C</span>, <span id="dayTwoWind">10</span>mph, <span id="dayTwoHum">10</span>%</p>
+
+            <h3>Saturday</h3>
+            <p><span id="dayThreeTemp">10°C</span>, <span id="dayThreeWind">10</span>mph, <span id="dayThreeHum">10</span>%</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <h3>Tomorrow</h3>
+            <div class="row">
+              <div class="col-6">
+                <span class="icon">☀</span>
+              </div>
+              <div class="col">
+                <ul>
+                 <li id="dayOneTemp">10°C</li>
+                  <li id="dayOneWind">10 mph</li>
+                  <li id="dayOneHum">10%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <h3>Sunday</h3>
+            <p><span id="dayFourTemp">10°C</span>, <span id="dayFourWind">10</span>mph, <span id="dayFourHum">10</span>%</p>
+
+            <button type="button" class="btn btn-outline-info"id="reloadButton">
+              Current</br>Location
+            </button>
+            <div class="note">Get up-to-date weather alerts in your city</div>
+          </div>
+        </div>
+        <div class="currentDate" id="currentTime">Todays date</div>
+      </div>
+    </div>
+    <script src="src/Script.js"></script>
+  </body>
+</html>
+
